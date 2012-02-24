@@ -10,14 +10,13 @@ built on the following primitives:
   in fact a special type of component, one which forms an entry point into the
   system.
 
-* Components: data dependencies of resources (or resources themselves).
-  Components are inherently multithreaded and computed in parallel. Somewhat
-  analogous to "models" in frameworks like Rails, components are the natural
-  abstraction Lattice provides for subdividing the work needed to compute a
-  representation of a particular resource, and are where things like database
-  interactions and additional queries to external services should take place.
-  Components map data dependencies into "slots" which can be used by renderers
-  to compute representations of data within the system.
+* Cells: Lattice's go-to domain model object. Cells represent data dependencies
+  of resources, or are resources themselves. Every Cell is a Cellulid actor, 
+  which makes them multithread and allows them to compute in parallel on modern
+  Ruby interpreters such as JRuby and Rubinius which don't have a Global
+  Interpreter Lock preventing concurrent execution of Ruby code. Cells map data
+  dependencies into "slots" which can be used by renderers to compute
+  representations of data within the system.
 
 * Renderers: translate data within the system, as fetched by components, into
   a requested representation. Renderers handle the specifics of dynamically
