@@ -1,5 +1,6 @@
 ![Lattice](https://github.com/celluloid/lattice/raw/master/logo.png)
-=======
+==========
+[![Build Status](https://secure.travis-ci.org/celluloid/lattice.png?branch=master)](http://travis-ci.org/tarcieri/lattice)
 
 Lattice is a pervasively multithreaded web framework for Ruby which makes
 building realtime web applications with WebSockets simple and fun. It's
