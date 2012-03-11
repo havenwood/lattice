@@ -1,4 +1,4 @@
-![Lattice](https://github.com/tarcieri/lattice/raw/master/logo.png)
+![Lattice](https://github.com/celluloid/lattice/raw/master/logo.png)
 =======
 
 Lattice is a pervasively multithreaded web framework for Ruby which makes
