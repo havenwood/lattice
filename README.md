@@ -1,6 +1,6 @@
 ![Lattice](https://github.com/celluloid/lattice/raw/master/logo.png)
 ==========
-[![Build Status](https://secure.travis-ci.org/celluloid/lattice.png?branch=master)](http://travis-ci.org/tarcieri/lattice)
+[![Build Status](https://secure.travis-ci.org/celluloid/lattice.png?branch=master)](http://travis-ci.org/celluloid/lattice)
 
 Lattice is a pervasively multithreaded web framework for Ruby which makes
 building realtime web applications with WebSockets simple and fun. It's
@@ -31,4 +31,4 @@ built on the following primitives:
 Copyright
 ---------
 
-Copyright © 2011 Tony Arcieri. See LICENSE.txt for further details.
+Copyright © 2012 Tony Arcieri. See LICENSE.txt for further details.
