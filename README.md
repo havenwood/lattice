@@ -13,7 +13,7 @@ built on the following primitives:
   as its resource framework.
 
 * Cells: Lattice's go-to domain model object. Cells represent data dependencies
-  of resources, or are resources themselves. Every Cell is a Cellulid actor, 
+  of resources, or are resources themselves. Every Cell is a Celluloid actor, 
   which makes them multithreaded and allows them to compute in parallel (at least
   on modern Ruby interpreters such as JRuby and Rubinius which don't have a Global
   Interpreter Lock). They can also do scatter/gather-type I/O operations, making
