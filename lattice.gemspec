@@ -15,11 +15,10 @@ Gem::Specification.new do |gem|
   gem.require_paths = ['lib']
   gem.version       = Lattice::VERSION
   
-  gem.add_dependency 'celluloid'
-  gem.add_dependency 'dcell'
-  gem.add_dependency 'cramp'
-  gem.add_dependency 'webmachine'
-  gem.add_dependency 'activesupport'
+  gem.add_dependency 'celluloid',     '~> 0.14.0'
+  gem.add_dependency 'reel',          '~> 0.3.0'
+  gem.add_dependency 'webmachine',    '~> 1.1.0'
+  gem.add_dependency 'activesupport', '~> 4.0.0'
   
   gem.add_development_dependency 'rake'
   gem.add_development_dependency "rspec", ">= 2.7.0"
