@@ -1,16 +1,27 @@
 ![Lattice](https://github.com/celluloid/lattice/raw/master/logo.png)
 ==========
 [![Build Status](https://secure.travis-ci.org/celluloid/lattice.png?branch=master)](http://travis-ci.org/celluloid/lattice)
+[![Code Climate](https://codeclimate.com/github/celluloid/lattice.png)](https://codeclimate.com/github/celluloid/lattice)
 
-Lattice is a pervasively multithreaded web framework for Ruby which makes
-building realtime web applications with WebSockets simple and fun. It's
-built on the following primitives:
+Lattice is an actor-based web framework for Ruby built on top of
+[Celluloid][celluloid], [Reel][reel], and [Webmachine][webmachine]. Designed
+from the ground up for realtime applications, end-to-end streaming, and
+Websockets, Lattice provides solutions to some of the biggest pain points in
+web application development today.
+
+[celluloid]: https://github.com/celluloid/celluloid/
+[reel]: https://github.com/celluloid/reel
+[webmachine]: https://github.com/seancribbs/webmachine-ruby/
+
+## Features
 
 * Resources: the main glue type between Lattice and the web, resources provide
   an HTTP endpoint for interacting with entities in the system. Resources are
   in fact a special type of component, one which forms an entry point into the
   system. Lattice uses [Webmachine](https://github.com/seancribbs/webmachine-ruby)
   as its resource framework.
+
+## Vaporware Features (Coming Soon™!)
 
 * Cells: Lattice's go-to domain model object. Cells represent data dependencies
   of resources, or are resources themselves. Every Cell is a Celluloid actor, 
@@ -37,4 +48,5 @@ built on the following primitives:
 Copyright
 ---------
 
-Copyright © 2012 Tony Arcieri. See LICENSE.txt for further details.
+Copyright © 2013 Tony Arcieri. Distributed under the MIT license.
+See LICENSE.txt for further details.
