@@ -1,5 +1,5 @@
-require "lattice/version"
+require 'lattice/version'
+require 'lattice/resource'
 
 module Lattice
-  # Your code goes here...
 end
