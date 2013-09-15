@@ -3,6 +3,8 @@ require 'active_support/core_ext/class/attribute'
 
 module Lattice
   class Resource < Webmachine::Resource
+    include Celluloid::Logger
+
     class_attribute :allowed_methods
     class_attribute :content_types_accepted
     class_attribute :content_types_provided
@@ -58,6 +60,10 @@ module Lattice
       encodings = self.class.encodings_provided
       return encodings if encodings && !encodings.empty?
       super
+    end
+
+    def handle_exception(ex)
+      crash "#{self.class} crashed!", ex
     end
   end
 end
