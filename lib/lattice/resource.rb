@@ -1,6 +1,9 @@
 require 'webmachine'
 require 'active_support/core_ext/class/attribute'
 
+# For Celluloid::Logger
+require 'celluloid'
+
 module Lattice
   class Resource < Webmachine::Resource
     include Celluloid::Logger
