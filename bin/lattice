@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require 'lattice/cli'
+
+Lattice::CLI.start(ARGV)
