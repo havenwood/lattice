@@ -38,6 +38,8 @@ module Lattice
       if File.directory?(path)
         ohai "       exist".light_blue + "  #{path}"
       elsif File.exist?(path)
+         ohai "    conflict".light_red + " #{output_path}"
+         ohai "Template resumes #{output_path} is a directory!"
       else
         ohai "      create".light_green + "  #{path}"
         mkdir_p path
@@ -54,6 +56,7 @@ module Lattice
         if generated_file == existing_file
           ohai "   identical".light_blue + "  #{output_path}"
         else
+          ohai "    conflict".light_red + " #{output_path}"
           overwrite = prompt("Overwrite #{output_path}? [yn] ")
           if overwrite == "y"
             ohai "       force".light_yellow + "  #{output_path}"
@@ -63,6 +66,8 @@ module Lattice
           end
         end
       else
+        directory = File.dirname(output_path) + "/"
+        generate_directory(directory) unless File.directory?(directory)
         ohai "      create".light_green + "  #{output_path}"
         File.open(output_path, "w") { |f| f << generated_file }
       end
