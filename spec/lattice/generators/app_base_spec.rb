@@ -1,7 +1,7 @@
 require 'spec_helper'
-require 'lattice/generator'
+require 'lattice/generators/app_base'
 
-describe Lattice::Generator do
+describe Lattice::Generators::AppBase do
   let(:example_app)  { "exemplifier" }
   let(:example_path) { File.join(TMPDIR, example_app) }
 
