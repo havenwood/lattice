@@ -3,6 +3,7 @@
 [![Build Status](https://secure.travis-ci.org/celluloid/lattice.png?branch=master)](http://travis-ci.org/celluloid/lattice)
 [![Code Climate](https://codeclimate.com/github/celluloid/lattice.png)](https://codeclimate.com/github/celluloid/lattice)
 [![Coverage Status](https://coveralls.io/repos/celluloid/lattice/badge.png)](https://coveralls.io/r/celluloid/lattice)
+[![Dependency Status](https://gemnasium.com/celluloid/lattice.png)](https://gemnasium.com/celluloid/lattice)
 
 Lattice is an actor-based web framework for Ruby built on top of
 [Celluloid][celluloid], [Reel][reel], and [Webmachine][webmachine]. Designed
