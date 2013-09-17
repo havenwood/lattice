@@ -36,7 +36,7 @@ module Lattice
           end
         end
 
-        ohai "NOTE: You might want to 'cd #{app_root} && bundle' now"
+        ohai "NOTE: You might want to 'cd #{app_root} && bundle' now" if new_app
       end
     end
   end
