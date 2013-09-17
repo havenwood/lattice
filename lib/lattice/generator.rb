@@ -1,5 +1,11 @@
+require 'colorize'
+require 'erb'
+require 'fileutils'
+
 module Lattice
   module Generator
+    include FileUtils
+
     # Create a directory within the application if it doesn't exit
     def generate_directory(path)
       if File.directory?(path)
@@ -45,7 +51,7 @@ module Lattice
       puts message
     end
 
-
+    # Renders ERB file templates for generators
     class ERBRenderer
       def initialize(template, options)
         @template = template

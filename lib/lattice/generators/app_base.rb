@@ -1,15 +1,10 @@
-require 'fileutils'
-require 'erb'
-
 require 'lattice/generator'
 require 'active_support/inflector'
-require 'colorize'
 
 module Lattice
   module Generators
     class AppBase
       include Generator
-      include FileUtils
 
       DEFAULT_APP_TEMPLATE = File.expand_path("../../../../template", __FILE__)
 
@@ -23,6 +18,10 @@ module Lattice
       # Generate a Lattice application at the given path
       def generate(app_root)
         app_root = File.expand_path(app_root)
+
+        # Is this a brand spankin' new app?
+        new_app = !File.exists?(app_root)
+
         template_paths = Dir[File.join(@template_path, '**', '*')]
         raise "No templates found. Something's wrong? :(" if template_paths.empty?
 
@@ -36,6 +35,8 @@ module Lattice
             generate_file(input_path, output_path)
           end
         end
+
+        ohai "NOTE: You might want to 'cd #{app_root} && bundle' now"
       end
     end
   end
