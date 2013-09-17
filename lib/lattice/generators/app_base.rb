@@ -11,7 +11,7 @@ module Lattice
       include Generator
       include FileUtils
 
-      DEFAULT_APP_TEMPLATE = File.expand_path("../../../template", __FILE__)
+      DEFAULT_APP_TEMPLATE = File.expand_path("../../../../template", __FILE__)
 
       def initialize(name, options = {})
         @name = name.to_s
