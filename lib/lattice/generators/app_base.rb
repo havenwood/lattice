@@ -24,6 +24,7 @@ module Lattice
       def generate(app_root)
         app_root = File.expand_path(app_root)
         template_paths = Dir[File.join(@template_path, '**', '*')]
+        raise "No templates found. Something's wrong? :(" if template_paths.empty?
 
         template_paths.each do |input_path|
           relative_path = input_path.sub(@template_path, '')
