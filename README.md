@@ -45,6 +45,34 @@ web application development today.
   simple to send and receive messages from any part of a distributed system,
   including background jobs.
 
+Usage
+-----
+
+Lattice provides a Rails-like experience for getting you up-and-running.
+
+First, install the Lattice gem:
+
+```
+$ gem install lattice
+```
+
+Now create a new Rails app using the Lattice command line appliaction:
+
+```
+$ lattice new my_app
+```
+
+Unlike Rails we don't automatically run Bundler for you. You'll have to do
+that yourself:
+
+```
+$ cd my_app
+$ bundle
+```
+
+You're new Lattice app is ready to go!
+
+
 Copyright
 ---------
 
