@@ -1,5 +1,6 @@
 ![Lattice](https://github.com/celluloid/lattice/raw/master/logo.png)
 ==========
+[![Gem Version](https://badge.fury.io/rb/lattice.png)](http://rubygems.org/gems/lattice)
 [![Build Status](https://secure.travis-ci.org/celluloid/lattice.png?branch=master)](http://travis-ci.org/celluloid/lattice)
 [![Code Climate](https://codeclimate.com/github/celluloid/lattice.png)](https://codeclimate.com/github/celluloid/lattice)
 [![Coverage Status](https://coveralls.io/repos/celluloid/lattice/badge.png)](https://coveralls.io/r/celluloid/lattice)
