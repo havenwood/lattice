@@ -15,35 +15,30 @@ web application development today.
 
 ## Features
 
-* Resources: the main glue type between Lattice and the web, resources provide
-  an HTTP endpoint for interacting with entities in the system. Resources are
-  in fact a special type of component, one which forms an entry point into the
-  system. Lattice uses [Webmachine](https://github.com/seancribbs/webmachine-ruby)
-  as its resource framework.
+* **Resources**: the main glue type between Lattice and the web, resources
+  provide an HTTP endpoint which interfaces with other entities in the system.
+  Lattice uses [Webmachine][webmachine] as its base for its resource framework.
+
+[webmachine]: https://github.com/seancribbs/webmachine-ruby
 
 ## Vaporware Features (Coming Soon™!)
 
-* Cells: Lattice's go-to domain model object. Cells represent data dependencies
-  of resources, or are resources themselves. Every Cell is a Celluloid actor, 
-  which makes them multithreaded and allows them to compute in parallel (at least
-  on modern Ruby interpreters such as JRuby and Rubinius which don't have a Global
-  Interpreter Lock). They can also do scatter/gather-type I/O operations, making
-  them ideal for querying multiple services in parallel when computing a response.
-  Cells map data dependencies into "slots" which can be used by renderers to compute
-  representations of data within the system, an idea which combines Celluloid's
-  [futures][futures] with an API similar to [decent_exposure][decent_exposure].
+* **Cells**: Lattice's go-to domain model object. Cells represent data
+  dependencies of resources, or are resources themselves. All Cells are
+  Celluloid actors and run in parallel. Cells map data dependencies into "slots"
+  which can be computed in parallel while resources are rendering.
 
 [futures]: https://github.com/celluloid/celluloid/wiki/futures
 [decent_exposure]: https://github.com/voxdolo/decent_exposure
 
-* Renderers: translate data within the system, as fetched by components, into
+* **Renderers**: translate data within the system, as fetched by cells, into
   a requested representation. Renderers handle the specifics of dynamically
   constructing output documents from components. Lattice comes with renderers
   that understand various template languages.
 
-* Sockets: WebSocket connections back to individual clients. Lattice makes it
-  simple to send and receive messages from any part of a distributed system,
-  including background jobs.
+* **WebSockets**: WebSocket connections back to individual clients. Lattice
+  makes it simple to send and receive messages from any part of a distributed
+  system, including background jobs.
 
 Usage
 -----
