@@ -36,7 +36,8 @@ module Lattice
           end
         end
 
-        ohai "NOTE: You might want to 'cd #{app_root} && bundle' now" if new_app
+        ohai "NOTE: Don't forget to: ".light_yellow +
+             "cd #{app_root} && bundle".light_white
       end
     end
   end
