@@ -7,3 +7,5 @@ module <%= app_const_base %>
     end
   end
 end
+
+Lattice.app = <%= app_const_base %>::Application
