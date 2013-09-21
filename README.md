@@ -68,7 +68,7 @@ $ cd my_app
 $ bundle
 ```
 
-You're new Lattice app is ready to go!
+Your new Lattice app is ready to go!
 
 
 Copyright
