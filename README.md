@@ -48,7 +48,10 @@ Documentation
 
 [Please see the Lattice Wiki][wiki] for detailed documentation and usage notes.
 
+[YARD Documentation][yardoc] is also available.
+
 [wiki]: https://github.com/celluloid/lattice/wiki
+[yardoc]: http://rubydoc.info/github/celluloid/lattice/master/frames
 
 Usage
 -----
