@@ -1,3 +1,7 @@
+HEAD
+----
+* Nothing yet!
+
 0.2.0 (2013-10-01)
 ------------------
 * Create Lattice apps with `lattice new myapp`
