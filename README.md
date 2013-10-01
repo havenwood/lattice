@@ -84,7 +84,13 @@ Your new Lattice app is ready to go! Run:
 $ lattice server
 ```
 
-...to launch your new Lattice app under a local web server.
+...to launch your new Lattice app under a local web server. By default the
+appliaction will launch on http://127.0.0.1:3000/. If you visit this URL you
+should see:
+
+```
+Hello, Lattice!
+```
 
 Copyright
 ---------
