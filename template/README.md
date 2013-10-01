@@ -14,6 +14,18 @@ using Lattice, so here we go:
 
 [wiki]: https://github.com/celluloid/lattice/wiki
 
+## Adding Resources
+
+Resources are the heart of any Lattice application. They represent "RESTful"
+HTTP endpoints that respond in a fully deterministic manner depending on their
+state.
+
+Unfortunately, there's no resource generator at present! You will need to view
+the [Lattice Wiki documentation on Resources][resources] to find out information
+about the Resource API and how to add new resources to your application.
+
+[resources]: https://github.com/celluloid/lattice/wiki/Resources
+
 ## Starting the app
 
 To launch the application, run:
