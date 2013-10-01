@@ -5,7 +5,7 @@ require 'pathname'
 
 module Lattice
   class << self
-    attr_writer :app
+    attr_writer :app, :logger
 
     def app
       raise "no application set" unless defined?(@app)
@@ -28,6 +28,10 @@ module Lattice
 
         pwd
       end
+    end
+
+    def logger
+      @logger || Celluloid.logger
     end
   end
 end

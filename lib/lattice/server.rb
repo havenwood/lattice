@@ -1,5 +1,6 @@
-require 'lattice'
 require 'reel'
+require 'lattice'
+require 'lattice/request_logger'
 
 module Lattice
   class Server
@@ -22,6 +23,9 @@ module Lattice
         config.port    = @port
         config.adapter = :Reel
       end
+
+      Lattice.logger.info "A Reel good HTTP server! (Codename \"#{::Reel::CODENAME}\")"
+      Lattice.logger.info "Listening on http://#{@host}:#{@port}"
 
       app.run
     end
