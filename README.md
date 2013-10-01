@@ -54,7 +54,7 @@ First, install the Lattice gem:
 $ gem install lattice
 ```
 
-Now create a new Rails app using the Lattice command line appliaction:
+Now create a new Lattice application using the CLI tool:
 
 ```
 $ lattice new my_app
