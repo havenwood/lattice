@@ -43,6 +43,13 @@ web application development today.
   makes it simple to send and receive messages from any part of a distributed
   system, including background jobs.
 
+Documentation
+-------------
+
+[Please see the Lattice Wiki][wiki] for detailed documentation and usage notes.
+
+[wiki]: https://github.com/celluloid/lattice/wiki
+
 Usage
 -----
 
