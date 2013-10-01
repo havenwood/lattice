@@ -10,7 +10,7 @@ module Lattice
       Generators::AppBase.new(name).generate app_root
     end
 
-    desc "server", "launch a local lattice server"
+    desc "server", "launch a local Lattice server"
     def server
       require "lattice/server"
 
