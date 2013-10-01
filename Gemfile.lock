@@ -1,13 +1,13 @@
 GIT
   remote: git://github.com/celluloid/celluloid.git
-  revision: a4a0385a21d1f18ffdbabb376e1c9ef1167d7978
+  revision: 11fe1990fd6ebc723a21b2fef5bc7a540b83e3f0
   specs:
     celluloid (0.16.0.pre)
       timers (~> 1.1.0)
 
 GIT
   remote: git://github.com/celluloid/reel.git
-  revision: 37aa6740925ebdf9c3bd9243cc6b984e722c46d3
+  revision: 03241b0fad89be13e83a89403628cb186408fdd9
   specs:
     reel (0.5.0.pre)
       celluloid (>= 0.15.1)
@@ -18,9 +18,9 @@ GIT
 
 GIT
   remote: git://github.com/seancribbs/webmachine-ruby.git
-  revision: 4c09a6d7420e834980dfab8d00b73eccd2f0023d
+  revision: b31e8227d90da0900bfd3dcdfa787cb2043098a8
   specs:
-    webmachine (1.2.0)
+    webmachine (1.2.1)
       as-notifications (~> 1.0)
       i18n (>= 0.4.0)
       multi_json
@@ -34,7 +34,7 @@ PATH
       colorize (>= 0.5.0)
       reel (>= 0.4.0)
       thor (>= 0.18.0)
-      webmachine (~> 1.2.0)
+      webmachine (~> 1.2.1)
 
 GEM
   remote: https://rubygems.org/
@@ -51,8 +51,8 @@ GEM
       celluloid (>= 0.15.0)
       nio4r (>= 0.5.0)
     coderay (1.0.9)
-    colorize (0.5.8)
-    coveralls (0.6.9)
+    colorize (0.6.0)
+    coveralls (0.7.0)
       multi_json (~> 1.3)
       rest-client
       simplecov (>= 0.7)
@@ -61,13 +61,13 @@ GEM
     diff-lcs (1.2.4)
     ffi (1.9.0)
     formatador (0.2.4)
-    guard (1.8.2)
+    guard (1.8.3)
       formatador (>= 0.2.4)
-      listen (>= 1.0.0)
+      listen (~> 1.3)
       lumberjack (>= 1.0.2)
       pry (>= 0.9.10)
       thor (>= 0.14.6)
-    guard-rspec (3.0.3)
+    guard-rspec (3.1.0)
       guard (>= 1.8)
       rspec (~> 2.13)
     http (0.5.0)
@@ -101,7 +101,7 @@ GEM
       rspec-expectations (~> 2.14.0)
       rspec-mocks (~> 2.14.0)
     rspec-core (2.14.5)
-    rspec-expectations (2.14.2)
+    rspec-expectations (2.14.3)
       diff-lcs (>= 1.1.3, < 2.0)
     rspec-mocks (2.14.3)
     simplecov (0.7.1)
@@ -115,7 +115,7 @@ GEM
     thread_safe (0.1.3)
       atomic
     timers (1.1.0)
-    tins (0.9.0)
+    tins (0.11.0)
     tzinfo (0.3.37)
     websocket_parser (0.1.4)
       http
