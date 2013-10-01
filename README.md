@@ -78,8 +78,13 @@ $ cd my_app
 $ bundle
 ```
 
-Your new Lattice app is ready to go!
+Your new Lattice app is ready to go! Run:
 
+```
+$ lattice server
+```
+
+...to launch your new Lattice app under a local web server.
 
 Copyright
 ---------
