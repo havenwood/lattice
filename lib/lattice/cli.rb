@@ -2,6 +2,21 @@ require 'thor'
 
 module Lattice
   class CLI < Thor
+    class_option :version, aliases: :v,
+                           type: :boolean,
+                           default: false,
+                           desc: 'print the current Lattice version'
+
+    def help
+      if options[:version]
+        require "lattice/version"
+
+        puts "lattice #{Lattice::VERSION}"
+      else
+        super
+      end
+    end
+
     desc "create NAME", "create a new Lattice application called NAME"
     def create(name)
       require "lattice/generators/app_base"
