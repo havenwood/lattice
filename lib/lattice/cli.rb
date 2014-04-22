@@ -19,10 +19,18 @@ module Lattice
     end
 
     desc "server", "launch a local Lattice server"
+    method_option :addr, aliases: :a,
+                         type:    :string,
+                         default: "127.0.0.1",
+                         desc:    "listen on this address"
+    method_option :port, aliases: :p,
+                         type:    :numeric,
+                         default: 3000,
+                         desc:    "bind to this port"
     def server
       require "lattice/server"
 
-      Lattice::Server.new("127.0.0.1", 3000, root: Lattice.root).run
+      Lattice::Server.new(options[:addr], options[:port], root: Lattice.root).run
     end
 
     desc "new NAME", "alias for create"
