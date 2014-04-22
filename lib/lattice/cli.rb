@@ -2,19 +2,12 @@ require 'thor'
 
 module Lattice
   class CLI < Thor
-    class_option :version, aliases: :v,
-                           type: :boolean,
-                           default: false,
-                           desc: 'print the current Lattice version'
+    map ["-v", "--version"] => :version
+    desc "version", "show the current Lattice version"
+    def version
+      require "lattice/version"
 
-    def help
-      if options[:version]
-        require "lattice/version"
-
-        puts "lattice #{Lattice::VERSION}"
-      else
-        super
-      end
+      shell.say "lattice #{Lattice::VERSION}"
     end
 
     desc "create NAME", "create a new Lattice application called NAME"
