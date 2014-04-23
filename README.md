@@ -95,5 +95,5 @@ Hello, Lattice!
 Copyright
 ---------
 
-Copyright © 2013 Tony Arcieri. Distributed under the MIT license.
+Copyright © 2014 Tony Arcieri. Distributed under the MIT license.
 See LICENSE.txt for further details.
