@@ -17,9 +17,9 @@ Gem::Specification.new do |gem|
   gem.licenses      = ['MIT']
   
   gem.add_runtime_dependency 'celluloid',     '>= 0.15.1'
-  gem.add_runtime_dependency 'reel',          '>= 0.4.0'
-  gem.add_runtime_dependency 'webmachine',    '~> 1.2.1'
-  gem.add_runtime_dependency 'activesupport', '~> 4.0.0'
+  gem.add_runtime_dependency 'reel',          '>= 0.6.0'
+  gem.add_runtime_dependency 'webmachine',    '>= 1.2.1'
+  gem.add_runtime_dependency 'activesupport', '>= 4.0.0'
   gem.add_runtime_dependency 'thor',          '>= 0.18.0'
   gem.add_runtime_dependency 'colorize',      '>= 0.5.0'
   
