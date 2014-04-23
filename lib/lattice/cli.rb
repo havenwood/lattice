@@ -2,7 +2,7 @@ require 'thor'
 
 module Lattice
   class CLI < Thor
-    map "new" => :new
+    map "new" => :create
     desc "create [NAME]", "Create a new Lattice application called NAME (alias: new)"
     def create(name)
       require "lattice/generators/app_base"
