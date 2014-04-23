@@ -3,6 +3,6 @@ require 'lattice/cli'
 
 describe Lattice::CLI do
   it "sure could use some specs!" do
-    pending "write some!"
+    pending "it doesn't have any :("
   end
 end
