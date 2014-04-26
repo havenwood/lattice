@@ -1,23 +1,29 @@
 require 'spec_helper'
 require 'lattice/cli'
-require 'lattice/server'
 
 describe Lattice::CLI do
   describe "create" do
     let(:example_app)  { "exemplifier" }
-    let(:example_path) { File.join(TMPDIR, example_app) }
+    let(:app_base) { double }
 
-    before(:each) { FileUtils.rm_r(example_path) if File.directory?(example_path) }
+    before do
+      allow(app_base).to receive(:generate)
+      allow(Lattice::Generators::AppBase).to receive(:new).with(an_instance_of(String)).and_return(app_base)
+    end
 
     context "create command" do
       it "creates a new Lattice application" do
-        FileUtils.cd(TMPDIR) { described_class.start ["create", example_app] }
+        expect(Lattice::Generators::AppBase).to receive(:new).with(example_app)
+        expect(app_base).to receive(:generate)
+        described_class.start ["create", example_app]
       end
     end
 
     context "new command alias" do
       it "creates a new Lattice application" do
-        FileUtils.cd(TMPDIR) { described_class.start ["new", example_app] }
+        expect(Lattice::Generators::AppBase).to receive(:new).with(example_app)
+        expect(app_base).to receive(:generate)
+        described_class.start ["new", example_app]
       end
     end
   end
